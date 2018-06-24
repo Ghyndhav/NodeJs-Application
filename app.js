@@ -27,7 +27,9 @@ app.use(bodyParser.urlencoded({extended: true}));
 app.set("view engine", "ejs");
 app.use(express.static(__dirname + "/public"));
 app.use(flash());
+
 //passport configuration
+
 app.use(require("express-session")({
     secret: "suraj is very good boy",
     resave: false,
