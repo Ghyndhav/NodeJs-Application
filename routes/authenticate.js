@@ -8,9 +8,6 @@ router.get("/", function(req,res){
     
     res.render("landing");
 });
-
-
-
 //Authentication routes
 
 router.get("/register" , function(req, res) {
@@ -40,16 +37,6 @@ router.get("/login", function(req, res) {
     res.render("login");
 });
 
-
-// router.post("/login" , passport.authenticate("local",
-// {
-//     successFlash: "Welcome back",
-//     successRedirect: "/camp",
-    
-//     failureRedirect: "/login"
-
-// }),function(req, res){
-// } );
 
 router.post("/login", function(req,res,next){
     passport.authenticate("local" , 
