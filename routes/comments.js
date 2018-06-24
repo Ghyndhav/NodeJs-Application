@@ -8,18 +8,13 @@ var router = express.Router();
 var Campground = require("../models/camp.js");
 var Comment = require("../models/comment.js");
 
-
-
 router.get("/camp/:id/comments/new" , isLoggedIn, function(req, res) {
     Campground.findById(req.params.id, function(err, camp){
         if(err){
             console.log(err);
         }else{
              res.render("comments/New" , {camp: camp});
-            
-            
-        }
-        
+          }
     });
     
 });
