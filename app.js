@@ -53,7 +53,6 @@ app.use(commentroutes);
 app.use(authenticateroutes);
 app.use(campgroundroutes);
 
-
 app.listen(process.env.PORT, process.env.IP, function(){
     
     console.log("Scamp app server started!");
